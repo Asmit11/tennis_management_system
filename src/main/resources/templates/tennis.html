@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org/" >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" th:href="@{~/css/tennis.css}">
+
+  <title></title>
+</head>
+
+<body>
+<!-- sidebar content from here -->
+<div class="sidebarcontent">
+  <h3>Admin Panel</h3>
+
+  <a th:href="@{~/admin/dashboard}"><i class="fas fa-tachometer-alt me-2">Dashboard</i></a>
+  <a th:href="@{~/ball/addtennis}"><i class="fas fa-project-diagram me-2">Tennis</i></a>
+  <a th:href="@{~/admin/view}"> <i class="fas fa-chart-line me-2">View Tennis</i></a>
+  <a th:href="@{~/admin/contact}"><i class="fas fa-chart-line me-2">Tennis Review</i></a>
+  <a th:href="@{~/admin/report}"><i class="fas fa-paperclip me-2">Reports</i></a>
+<!--  <div class="logout">-->
+<!--    <i class="fas fa-power-off me-2">Logout</i>-->
+<!--  </div>-->
+  <div class="logout">
+    <a th:href="@{~/user/logout}"><i class="fas fa-power-off me-2">Logout</i></a>
+  </div>
+</div>
+<!-- sidebar content upto here -->
+
+<div class="insidecontent">
+  <h2 class="heading">Add Tennis to the Website</h2>
+  <form th:method="post" th:action="@{/ball/save}" th:object="${tennis}" enctype="multipart/form-data">
+  <div class="inputsection">
+    <input class="field" type="text" hidden placeholder="UserId..."  th:field="*{fid}" th:value="${tennis.fid}" />
+
+    <div class="name tennis">
+      <input type="text" placeholder="Enter the Tennis name" class="input-type" required th:field="*{fname}" th:value="${tennis.fname}">
+    </div>
+    <div class="price tennis">
+      <input type="text" placeholder="Price of Tennis per Hour" class="input-type" th:field="*{fprice}" th:value="${tennis.fprice}">
+    </div>
+    <div class="contact tennis">
+      <input type="text" placeholder="Contact Number of Tennis" class="input-type" th:field="*{fcontact}" th:value="${tennis.fcontact}">
+    </div>
+    <div class="location tennis">
+      <input type="text" placeholder="Enter the location of tennis" class="input-type" th:field="*{flocation}" th:value="${tennis.flocation}">
+    </div>
+    <div class="desc tennis">
+      <textarea type="text" placeholder="Description About Tennis" class="input-type" th:field="*{description}" th:value="${tennis.description}" cols="40" rows="10">
+        </textarea>
+    </div>
+    <div class="photo tennis">
+      <input type="file" th:field="*{image}" th:value="${tennis.image}" class="input-type">
+    </div>
+    <div class="photo tennis">
+      <input type="file" th:field="*{image1}" th:value="${tennis.image1}" class="input-type">
+    </div>
+    <div class="photo tennis">
+      <input type="file" th:field="*{image2}" th:value="${tennis.image2}" class="input-type">
+    </div>
+<!--<textarea name="contactmessage" placeholder="Type your message" required th:field="*{contactmessage}" th:value="${contact.contactsubject}">-->
+
+  </div>
+  <div class="button">
+    <button type="submit">Add tennis</button>
+  </div>
+  </form>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
