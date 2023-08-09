@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" th:href="@{~/css/edittennis.css}">
+  <title></title>
+</head>
+
+<body>
+<div class="insidecontent">
+  <div class="back">
+    <a th:href="@{/admin/view}"><i class="fa-solid fa-backward"> Back</i></a>
+  </div>
+  <h3>Edit the Info of Tennis</h3>
+  <form th:method="post" th:action="@{/ball/save}" th:object="${tenniss}" enctype="multipart/form-data">
+
+  <div class="inputsection">
+    <input class="iddds" hidden type="text" th:field="*{fid}" th:value="${clickedtennis.getTennisId()}">
+
+    <div class="name tennis">
+      <input type="text" placeholder="Enter the Tennis name" required th:field="*{fname}" th:value="${clickedtennis.getTennisname()}">
+    </div>
+    <div class="price tennis">
+      <input type="text" placeholder="Price of Tennis per Hour" th:field="*{fprice}" th:value="${clickedtennis.getTennisprice()}">
+    </div>
+    <div class="contact tennis">
+      <input type="text" placeholder="Enter the location of tennis" th:field="*{fcontact}" th:value="${clickedtennis.getTenniscontact()}">
+    </div>
+    <div class="location tennis">
+      <input type="text" placeholder="Enter the location of tennis" th:field="*{flocation}" th:value="${clickedtennis.getTennislocation()}">
+    </div>
+    <div class="desc">
+      <textarea type="text" placeholder="Description About Tennis"th:field="*{Description}" th:value="${clickedtennis.getDescription()}"></textarea>
+    </div>
+    <div class="photo tennis">
+      <input type="file"th:field="*{image}" th:value="${clickedtennis.getTennisimage()}">
+    </div>
+    <div class="photo tennis">
+      <input type="file"th:field="*{image1}" th:value="${clickedtennis.getTennisimage1()}">
+    </div>
+    <div class="photo tennis">
+      <input type="file"th:field="*{image2}" th:value="${clickedtennis.getTennisimage2()}">
+    </div>
+
+
+  </div>
+  <div class="edit">
+   <a th:href="@{~/admin/edit/}+${clickedtennis.tennisId}"> <button type="submit">Save Changes</button>
+   </a>
+  </div>
+  <div class="delete">
+   <a th:href="@{~/admin/delete/}+${clickedtennis.tennisId}"> <button type="button">Delete Tennis</button>
+    </a>
+  </div>
+
+  </form>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
