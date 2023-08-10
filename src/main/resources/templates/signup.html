@@ -16,20 +16,17 @@
                 <!-- <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget eros dapibus, ultricies tellus vitae, consectetur tortor. Etiam rutrum placerat
                 </p> -->
-                <a class="btn" th:href="@{~/user/index}">Goto Landing Page</a>
             </div>
         </div>
         <form th:method="post" th:action="@{/user/save}" th:object="${user}">
-
-        <div class="col-right">
-            <div class="login-form">
-                <h2>Signup</h2>
-                <form>
+            <div class="col-right">
+                <div class="login-form">
+                    <h2>Signup</h2>
                     <p>
                         <input type="text" placeholder="Name" required th:field="*{name}" th:value="${user.name}">
                     </p>
                     <p>
-                        <input type="text" placeholder="Address" required th:field="*{address} " th:value="${user.address}">
+                        <input type="text" placeholder="Address" required th:field="*{address}" th:value="${user.address}">
                     </p>
                     <p>
                         <input type="email" placeholder="Email" required th:field="*{email}" th:value="${user.email}">
@@ -41,21 +38,18 @@
                         <input type="password" placeholder="Password" required th:field="*{password}" th:value="${user.password}">
                     </p>
                     <p>
-                        <input type="password" placeholder=" Confirm Password" required>
+                        <input type="password" placeholder="Confirm Password" required>
                     </p>
                     <p>
                         <input class="btn" type="submit" value="Sign Up" />
                     </p>
-
                     <p>
                         <a th:href="@{/user/login}">Already Have an Account?</a>
                     </p>
-
-                </form>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
-
 </div>
 </body>
 </html>

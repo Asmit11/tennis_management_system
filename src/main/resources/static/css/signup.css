@@ -1,4 +1,4 @@
-/* * * * * General CSS * * * * */
+/* General CSS */
 *,
 *::before,
 *::after {
@@ -12,7 +12,7 @@ body {
     font-weight: 400;
     color: #666666;
     background: #eaeff4;
-    background: url('https://tennis.bc.ca/image/w2000-h900-c20:9/files/AdobeStock_127296532-web%20(1)-28.jpg');
+    background: url('https://img.freepik.com/premium-photo/top-view-tennis-ball-court-ground_23-2148251015.jpg');
     background-size: cover;
 }
 
@@ -26,24 +26,12 @@ body {
     flex-direction: column;
 }
 
-.container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: flex;
-    background: #ffffff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
-    border-radius: 20px;
-}
-
-
-
-/* * * * * Login Form CSS * * * * */
+/* Login Form CSS */
 h2 {
     margin: 0 0 15px 0;
-    font-size: 30px;
+    font-size: 45px;
     font-weight: 700;
+    text-align: center;
 }
 
 h2 img {
@@ -76,50 +64,11 @@ p {
     background: #ffffff;
 }
 
-.col-left,
-.col-right {
-    width: 100%;
-    padding: 45px 35px;
-    display: flex;
-}
-
-.col-left {
-    width: 55%;
-    /* background: #4CAF50; */
-    background: url('https://rare-gallery.com/thumbs/583774-tennis-jumping.jpg');
-    background-size: cover;
-    border-radius: 10px;
-    /* -webkit-clip-path: polygon(98% 17%, 100% 34%, 98% 51%, 100% 68%, 98% 84%, 100% 100%, 0 100%, 0 0, 100% 0);
-    clip-path: polygon(98% 17%, 100% 34%, 98% 51%, 100% 68%, 98% 84%, 100% 100%, 0 100%, 0 0, 100% 0); */
-}
-
-@media(max-width: 575.98px) {
-    .container {
-        flex-direction: column;
-        box-shadow: none;
-    }
-
-    .col-left,
-    .col-right {
-        width: 100%;
-        margin: 0;
-        padding: 30px;
-        -webkit-clip-path: none;
-        clip-path: none;
-    }
-}
-
-.login-text {
-    position: relative;
-    width: 100%;
-    color: #ffffff;
-    text-align: center;
-}
-
 .login-form {
     position: relative;
     width: 100%;
     color: #666666;
+    text-align: center;
 }
 
 .login-form p:last-child {

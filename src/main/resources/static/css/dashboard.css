@@ -41,9 +41,12 @@ body{
   
   /* sidebar css upto here */
 
-  .innercontent{
-    width: 80%;
-    margin-top: 20px;
-  
-  }
+.innercontent {
+  width: 80%;
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 20px;
+}
+
   

@@ -128,12 +128,12 @@ header .searchbar{
     border-radius: 0 10px 10px 0;
     color: var(--white);
     /* width: 10%; */
-    padding: 2%;
+    padding:0%;
     font-size: 2rem;
 }
 header .logo img {
-    width: 50px;
-    height: 50px;
+    width: 120px;
+    height: 120px;
     vertical-align: middle;
     padding-right: 10px;
 }
@@ -314,7 +314,7 @@ header .navbar a:hover {
     top: calc(100% - 12rem);
 }
 
-/* media queries  */
+/* media queries */
 
 @media (max-width: 991px) {
     html {
@@ -388,7 +388,7 @@ header .navbar a:hover {
         padding: 1.5rem;
         display: block;
         border: 0.2rem solid rgba(0, 0, 0, 0.1);
-        border-left: 0.5rem solid var(--red);
+        border-left: 0.5rem solid var(--primary);
         background: #fff;
     }
 
@@ -414,8 +414,8 @@ header .navbar a:hover {
         font-size: 50%;
     }
     /* header{
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
     } */
     header a {
         font-size: 2rem;
@@ -579,4 +579,3 @@ li i {
         width: 100%;
     }
 }
-
