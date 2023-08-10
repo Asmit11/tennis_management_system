@@ -95,6 +95,11 @@ p {
         clip-path: none;
     }
 }
+.login-text img {
+    max-width: 100%; /* Adjust the image width as needed */
+    margin-bottom: 10px; /* Add some spacing between the image and text */
+}
+
 
 .login-text {
     position: relative;
